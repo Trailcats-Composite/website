@@ -1,0 +1,292 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2a2a2a;
+}
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .announcement-cards, .event-cards {
+        grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+    }
+}
+
+/* Main Layout */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+    background-color: #2a2a2a;
+    padding: 15px;
+    color: white;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+}
+
+    .nav-list li {
+        font-size: 1.1em;
+    }
+
+    .nav-list a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+/* Footer */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ddd;
+    border-top: 1px solid #444;
+    padding: 15px 0;
+    font-size: 0.85em;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('/img/team_2024.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+        z-index: 1;
+    }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for text box */
+}
+
+    .hero-content h1 {
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+        margin-bottom: 1.5em;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content button {
+        padding: 12px 24px;
+        font-size: 1.1em;
+        color: white;
+        background-color: #007acc;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+        .hero-content button:hover {
+            background-color: #005fa3;
+            transform: translateY(-2px); /* Subtle lift on hover */
+        }
+
+
+/* Sections (General) */
+.section {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards (Used across various sections) */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+/* Cards */
+.announcement-card, .event-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    margin-bottom: 15px;
+}
+
+    .announcement-card:hover, .event-card:hover {
+        transform: scale(1.03); /* Slightly enlarges the card on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow */
+    }
+
+    .announcement-card h3, .event-card h3 {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .announcement-card p, .event-card p {
+        color: #666;
+    }
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .contact-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .contact-form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+
+    .contact-form button {
+        padding: 10px 20px;
+        font-size: 1em;
+        color: white;
+        background-color: #007acc;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact-form button:hover {
+            background-color: #005fa3;
+        }
+
+
+/* Specific Sections */
+
+.announcements, .events, .mission-values, .coach-message, .about-team, .quick-links-intro, .faq-intro {
+    @extend .section;
+}
+
+.links-list ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.links-list a {
+    display: inline-block;
+    background-color: #007acc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+    .links-list a:hover {
+        background-color: #005fa3;
+    }
+
+.profile-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-card h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact-intro, .additional-contact-info {
+    text-align: center;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px;
+}
